@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Бронирование билетов на рейсы</title>
+  <script type="module" crossorigin src="/index-1PQQoIMG.js"></script>
+  <link rel="stylesheet" crossorigin href="/index-KcfhNu7S.css">
+</head>
+<body>
+    <header class="app-header" id="app-header">
+        <h1 class="app-header__app-name">Бронирование билетов на рейсы</h1>
+        <div class="app-header__user-and-controls">
+        <div class="user-info">
+            <div class="user-info__avatar"></div>
+            <span class="user-info__username">
+                Смирнов Никита
+            </span>
+        </div>
+        <label class="toggle-switch" id="theme-switch">
+            <input type="checkbox" class="toggle-switch__checkbox">
+            <div class="toggle-switch__slider"></div>
+        </label>
+    </div>
+    </header>
+    <main class="app-main" id="app-main">
+        <ul class="flights-list">
+            <li class="flights-list__item flight-adder">
+                <button type="button" class="flight-adder__btn">
+                    &#10010; Добавить рейс
+                </button>
+                <div class="flight-adder__input" style="display: none;">
+                    <input 
+                    type="text" 
+                    placeholder="Направление"
+                    class="flight-adder__input_direction">
+                    <input 
+                    type="datetime-local" 
+                    placeholder="Дата и время вылета"
+                    class="flight-adder__input_date">
+                    <select id="airType" class="flight-adder__input_air-type">
+                        <option value="Pen">Pen</option>
+                        <option value="Pencil">Pencil</option>
+                        <option value="Paper">Paper</option>
+                    </select>
+            </li>
+        </ul>
+    </main>
+    <dialog class="app-modal" id="modal-add-booking">
+        <form class="app-modal__form">
+            <label for="model-add-booking-input" class="app-modal__question">
+                Введите ФИО:
+            </label>
+            <input type="text" id="modal-add-booking-input" class="app-modal__input">
+            <div class="app-modal__controls">
+                <button type="button" class="app-modal__btn modal-ok-btn">OK</button>
+                <button type="button" class="app-modal__btn modal-cancel-btn">Отмена</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog class="app-modal" id="modal-edit-booking">
+        <form class="app-modal__form">
+            <label for="model-edit-booking-input" class="app-modal__question">
+                Введите ФИО:
+            </label>
+            <input type="text" id="modal-edit-booking-input" class="app-modal__input">
+            <div class="app-modal__controls">
+                <button type="button" class="app-modal__btn modal-ok-btn">OK</button>
+                <button type="button" class="app-modal__btn modal-cancel-btn">Отмена</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog class="app-modal" id="modal-delete-booking">
+        <form class="app-modal__form">
+            <label class="app-modal__question">
+                
+            </label>
+            <div class="app-modal__controls">
+                <button type="button" class="app-modal__btn modal-ok-btn">OK</button>
+                <button type="button" class="app-modal__btn modal-cancel-btn">Отмена</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog class="app-modal" id="modal-edit-flight">
+        <form class="app-modal__form">
+            <label for="model-edit-booking-input" class="app-modal__question">
+                Введите новые данные рейса:
+            </label>
+            <input 
+            type="text" 
+            placeholder="Направление"
+            class="app-modal__direction">
+            <input 
+            type="datetime-local" 
+            placeholder="Дата и время вылета"
+            class="app-modal__date">
+            <select id="modal-airType" class="app-modal__date__air-type">
+                <option value="Pen">Pen</option>
+                <option value="Pencil">Pencil</option>
+                <option value="Paper">Paper</option>
+            </select>
+            <div class="app-modal__controls">
+                <button type="button" class="app-modal__btn modal-ok-btn">OK</button>
+                <button type="button" class="app-modal__btn modal-cancel-btn">Отмена</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog class="app-modal" id="modal-delete-flight">
+        <form class="app-modal__form">
+            <label class="app-modal__question">
+                
+            </label>
+            <div class="app-modal__controls">
+                <button type="button" class="app-modal__btn modal-ok-btn">OK</button>
+                <button type="button" class="app-modal__btn modal-cancel-btn">Отмена</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog class="app-notifications" id="app-notifications">
+        
+    </dialog>
+</body>
+</html>
